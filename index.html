@@ -12,6 +12,9 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
     <!-- tailwindcss link  -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+
+    </style>
 </head>
 
 
@@ -33,71 +36,113 @@
     </header>
     <main>
         <section class="w-9/12 mx-auto mt-10">
+
             <div class="grid grid-cols-4 gap-4">
+                <!-- player info start -->
                 <div class="card card-compact  bg-base-100 shadow-xl">
-                    <figure><img src="images/IMG_0067.jpeg" alt="Shoes" class="w-full h-64" /></figure>
+                    <figure><img src="images/IMG_0067.jpeg" alt="Shoes" class="w-full h-64 " /></figure>
                     <div class="card-body">
-                        <h2 class="card-title">Lionel Messi</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <h2 class="card-title font-bold font-sanstext-center">Lionel Messi</h2>
+                        <div class="playerInfo grid grid-cols-2 justify-items-center text-xl pb-2">
+                            <p>32 goals</p>
+                            <p>assest</p>
+                        </div>
                         <div class="card-actions justify-center">
-                            <button class="w-full btn btn-primary">SELECT</button>
+                            <button class="w-full btn btn-primary " onclick="selectPlayer(this)">SELECT</button>
                         </div>
                     </div>
                 </div>
                 <div class="card card-compact  bg-base-100 shadow-xl">
-                    <figure><img src="images/neymar.jpg" alt="Shoes" class="w-full h-64" /></figure>
+                    <figure><img src="images/neymar.jpg" alt="Shoes" class="w-full h-64 " /></figure>
                     <div class="card-body">
-                        <h2 class="card-title">Neymar Jr</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <h2 class="card-title font-bold font-sanstext-center">Neymar Jr</h2>
+                        <div class="playerInfo grid grid-cols-2 justify-items-center text-xl pb-2">
+                            <p>32 goals</p>
+                            <p>assest</p>
+                        </div>
                         <div class="card-actions justify-center">
-                            <button class="w-full btn btn-primary">SELECT</button>
+                            <button class="w-full btn btn-primary " onclick="selectPlayer(this)">SELECT</button>
                         </div>
                     </div>
                 </div>
-                <div class="card card-compact w-full bg-base-100 shadow-xl">
-                    <figure><img src="images/Kylian.jpg" alt="Shoes" class="w-full h-64" /></figure>
+                <div class="card card-compact  bg-base-100 shadow-xl">
+                    <figure><img src="images/Kylian.jpg" alt="Shoes" class="w-full h-64 " /></figure>
                     <div class="card-body">
-                        <h2 class="card-title">Kylian Mbappe</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <h2 class="card-title font-bold font-sanstext-center">Kylian Mbappe</h2>
+                        <div class="playerInfo grid grid-cols-2 justify-items-center text-xl pb-2">
+                            <p>32 goals</p>
+                            <p>assest</p>
+                        </div>
                         <div class="card-actions justify-center">
-                            <button class="w-full btn btn-primary">SELECT</button>
+                            <button class="w-full btn btn-primary " onclick="selectPlayer(this)">SELECT</button>
                         </div>
                     </div>
                 </div>
+
+
                 <div class="card card-compact bg-base-100 shadow-xl">
-                    <h1 class="text-3xl text-white font-sans text-center my-3">Selected-V</h2>
+                    <h2 class="text-3xl text-white font-sans text-center my-3">Selected-V</h2>
+                    <!-- select table  -->
+                    <div class="overflow-x-auto">
+                        <table class="table table-zebra w-full">
+                            <!-- head -->
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th class="font-bold">Name</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+
 
                 </div>
-                <div class="card card-compact w-full bg-base-100 shadow-xl">
-                    <figure><img src="images/cinco.jpg" alt="Shoes" class="w-full h-64" /></figure>
+                <div class="card card-compact  bg-base-100 shadow-xl">
+                    <figure><img src="images/cinco.jpg" alt="Shoes" class="w-full h-64 " /></figure>
                     <div class="card-body">
-                        <h2 class="card-title">Renato Sanches</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <h2 class="card-title font-bold font-sanstext-center">Renato Sanches</h2>
+                        <div class="playerInfo grid grid-cols-2 justify-items-center text-xl pb-2">
+                            <p>32 goals</p>
+                            <p>assest</p>
+                        </div>
                         <div class="card-actions justify-center">
-                            <button class="w-full btn btn-primary">SELECT</button>
+                            <button class="w-full btn btn-primary " onclick="selectPlayer(this)">SELECT</button>
                         </div>
                     </div>
                 </div>
-                <div class="card card-compact w-full bg-base-100 shadow-xl">
-                    <figure><img src="images/Vitor.jpg" alt="Shoes" class="w-full h-64" /></figure>
+                <div class="card card-compact  bg-base-100 shadow-xl">
+                    <figure><img src="images/Vitor.jpg" alt="Shoes" class="w-full h-64 " /></figure>
                     <div class="card-body">
-                        <h2 class="card-title">Vitor Machado</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <h2 class="card-title font-bold font-sanstext-center">Vitor Machado</h2>
+                        <div class="playerInfo grid grid-cols-2 justify-items-center text-xl pb-2">
+                            <p>32 goals</p>
+                            <p>assest</p>
+                        </div>
                         <div class="card-actions justify-center">
-                            <button class="w-full btn btn-primary">SELECT</button>
+                            <button class="w-full btn btn-primary " onclick="selectPlayer(this)">SELECT</button>
                         </div>
                     </div>
                 </div>
-                <div class="card card-compact w-full bg-base-100 shadow-xl">
-                    <figure><img src="images/player.jpg" alt="Shoes" class="w-full h-64" /></figure>
+                <div class="card card-compact  bg-base-100 shadow-xl">
+                    <figure><img src="images/player.jpg" alt="Shoes" class="w-full h-64 " /></figure>
                     <div class="card-body">
-                        <h2 class="card-title">Sergio Ramos</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <h2 class="card-title font-bold font-sanstext-center">Sergio Ramos</h2>
+                        <div class="playerInfo grid grid-cols-2 justify-items-center text-xl pb-2">
+                            <p>32 goals</p>
+                            <p>assest</p>
+                        </div>
                         <div class="card-actions justify-center">
-                            <button class="w-full btn btn-primary">SELECT</button>
+                            <button class="w-full btn btn-primary " onclick="selectPlayer(this)">SELECT</button>
                         </div>
                     </div>
                 </div>
+
+
+
                 <div class="card card-compact bg-base-100 shadow-xl">
                     <figure><img src="images/mario.jpg" alt="Shoes" class="w-full h-48" /></figure>
                     <div class="card-body">
@@ -109,13 +154,15 @@
                     </div>
                 </div>
                 <div class="card card-compact  bg-base-100 shadow-xl">
-                    <figure><img src="images/mario.jpg" alt="Shoes" class="w-full h-64" /></figure>
+                    <figure><img src="images/mario.jpg" alt="Shoes" class="w-full h-64 " /></figure>
                     <div class="card-body">
-                        <h2 class="card-title">Mario Balotelli
-                        </h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <h2 class="card-title font-bold font-sanstext-center">Mario Balotelli</h2>
+                        <div class="playerInfo grid grid-cols-2 justify-items-center text-xl pb-2">
+                            <p>32 goals</p>
+                            <p>assest</p>
+                        </div>
                         <div class="card-actions justify-center">
-                            <button class="w-full btn btn-primary">SELECT</button>
+                            <button class="w-full btn btn-primary " onclick="selectPlayer(this)">SELECT</button>
                         </div>
                     </div>
                 </div>
@@ -123,6 +170,8 @@
         </section>
 
     </main>
+    <script src="js/select.js"></script>
 </body>
+
 
 </html>
