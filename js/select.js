@@ -1,15 +1,19 @@
-const playerListArray = [];
+const playerListArray = []
+let count = 0;
 //step2: add player name to the list 
 function playerList(playerName) {
 
     const tableBody = document.getElementById('table-playerName')
-    tableBody.innerHTML = "";
-
-    for (let i = 0; i < playerName.length; i++) {
-        const name = playerListArray[i];
+    const tableElementLength = tableBody.children.length
+    if (tableElementLength + 1 > 6) {
+        alert('You can select only 5 players')
+        return;
+    }
+    else {
         const tr = document.createElement("tr")
-        tr.innerHTML = `<th>${i + 1}</th>
-<th>${name}</th>`;
+        tr.innerHTML = `<th>${count}</th>
+    <th>${playerName}</th>`;
+        playerListArray.push(playerName);
         tableBody.appendChild(tr);
     }
 
@@ -17,22 +21,21 @@ function playerList(playerName) {
 
 // step1: scan player name
 function selectPlayer(element) {
-    if (playerListArray.length < 5) {
-        const playerName = element.parentNode.parentNode.children[0].innerText;
-        playerListArray.push(playerName);
-        playerList(playerListArray);
-        // button disable 
-        element.disable = 'true';
+    count++;
+    const playerName = element.parentNode.parentNode.children[0].innerText;
+    playerList(playerName);
+    // button disable 
+    if (count < 6) {
+        element.setAttribute('disabled', true)
         element.style.background = 'gray';
     }
-    else alert('you can not select more than 5 players')
-
 
 }
 
+
 //step3: calculate total player cost
 document.getElementById('calculate-btn').addEventListener('click', function () {
-    const perPlayerCost = common('per-player-cost');
+    const perPlayerCost = common('per-player-cost'); //from common.js file
 
     const total = perPlayerCost * playerListArray.length;
 
@@ -43,10 +46,11 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
 })
 //step3: calculate total cost
 document.getElementById('calculate-total-btn').addEventListener('click', function () {
-    const managerCost = common('manager-cost');
-    const coachCost = common('coach-cost');
+    const managerCost = common('manager-cost'); //from common.js file
+    const coachCost = common('coach-cost'); //from common.js file
     const totalPlayerCost = commonText('total-player-cost')
     const finalCost = managerCost + coachCost + totalPlayerCost;
     const totalCostFild = document.getElementById('total-cost-field');
+
     totalCostFild.innerText = finalCost
 })

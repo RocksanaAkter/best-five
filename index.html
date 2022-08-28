@@ -13,7 +13,23 @@
     <!-- tailwindcss link  -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        #table-heading {
+            text-align: center;
+            font-size: 25px;
+            color: rgb(171, 123, 12);
+            font-weight: 700;
+            font-family: sans-serif;
+            text-decoration: underline;
+        }
 
+        #player-name {
+            text-align: center;
+            font-size: 25px;
+            color: whitesmoke;
+            font-weight: 700;
+            font-family: sans-serif;
+
+        }
     </style>
 </head>
 
@@ -42,7 +58,7 @@
                 <div class="card card-compact  bg-base-100 shadow-xl">
                     <figure><img src="images/IMG_0067.jpeg" alt="Shoes" class="w-full h-64 " /></figure>
                     <div class="card-body">
-                        <h2 class="card-title font-bold font-sanstext text-2xl text-white">
+                        <h2 id="player-name" class="card-title">
                             Lionel Messi</h2>
                         <div class="playerInfo grid grid-cols-2 justify-items-center text-xl pb-2">
                             <p>32 goals</p>
@@ -57,7 +73,7 @@
                 <div class="card card-compact  bg-base-100 shadow-xl">
                     <figure><img src="images/neymar.jpg" alt="Shoes" class="w-full h-64 " /></figure>
                     <div class="card-body">
-                        <h2 class="card-title font-bold font-sanstext text-2xl text-white">Neymar Jr</h2>
+                        <h2 id="player-name" class="card-title">Neymar Jr</h2>
                         <div class="playerInfo grid grid-cols-2 justify-items-center text-xl pb-2">
                             <p>32 goals</p>
                             <p>assest</p>
@@ -71,7 +87,8 @@
                 <div class="card card-compact  bg-base-100 shadow-xl">
                     <figure><img src="images/Kylian.jpg" alt="Shoes" class="w-full h-64 " /></figure>
                     <div class="card-body">
-                        <h2 class="card-title font-bold font-sanstext text-2xl text-white">Kylian Mbappe</h2>
+                        <h2 id="player-name" class="card-title">Kylian Mbappe
+                        </h2>
                         <div class="playerInfo grid grid-cols-2 justify-items-center text-xl pb-2">
                             <p>32 goals</p>
                             <p>assest</p>
@@ -83,21 +100,19 @@
                     </div>
                 </div>
 
-
                 <div class="card card-compact bg-base-100 shadow-xl">
-                    <h2
-                        class="text-center text-2xl text-white font-bold font-sans my-3 underline underline-offset-8 text-orange-400">
-                        Selected-V</h2>
+                    <!-- style in 16 no line  -->
+                    <h2 id="table-heading">Selected-V</h2>
                     <!-- select table  -->
                     <div class="overflow-x-auto">
                         <table class="table table-zebra w-full">
-
                             <thead>
                                 <tr>
                                     <th></th>
                                     <th class="font-bold">Name</th>
                                 </tr>
                             </thead>
+
                             <tbody id="table-playerName">
                                 <tr>
                                     <!-- player selection list  -->
@@ -111,7 +126,7 @@
                 <div class="card card-compact  bg-base-100 shadow-xl">
                     <figure><img src="images/cinco.jpg" alt="Shoes" class="w-full h-64 " /></figure>
                     <div class="card-body">
-                        <h2 class="card-title font-bold font-sanstext text-2xl text-white">Renato Sanches</h2>
+                        <h2 id="player-name" class="card-title">Renato Sanches</h2>
                         <div class="playerInfo grid grid-cols-2 justify-items-center text-xl pb-2">
                             <p>32 goals</p>
                             <p>assest</p>
@@ -125,7 +140,8 @@
                 <div class="card card-compact  bg-base-100 shadow-xl">
                     <figure><img src="images/Vitor.jpg" alt="Shoes" class="w-full h-64 " /></figure>
                     <div class="card-body">
-                        <h2 class="card-title font-bold font-sanstext text-2xl text-white">Vitor Machado</h2>
+                        <h2 id="player-name" class="card-title">Vitor
+                            Machado</h2>
                         <div class="playerInfo grid grid-cols-2 justify-items-center text-xl pb-2">
                             <p>32 goals</p>
                             <p>assest</p>
@@ -139,7 +155,7 @@
                 <div class="card card-compact  bg-base-100 shadow-xl">
                     <figure><img src="images/player.jpg" alt="Shoes" class="w-full h-64 " /></figure>
                     <div class="card-body">
-                        <h2 class="card-title font-bold font-sanstext text-2xl text-white">Sergio Ramos</h2>
+                        <h2 id="player-name" class="card-title">Sergio Ramos</h2>
                         <div class="playerInfo grid grid-cols-2 justify-items-center text-xl pb-2">
                             <p>32 goals</p>
                             <p>assest</p>
@@ -152,16 +168,15 @@
                 </div>
 
                 <div id="calculation-list" class="card card-compact bg-base-100 shadow-xl p-4">
-                    <!-- total player cost  -->
+                    <!-- total player cost  start-->
                     <div>
-                        <h2
-                            class="text-center text-2xl text-white font-bold font-sans my-3 underline underline-offset-8 text-orange-400">
+                        <!-- style in 16 no line  -->
+                        <h2 id="table-heading">
                             Budget</h2>
                         <div class="grid grid-cols-2 gap-4">
                             <p class="text-lg font-medium">Per Player</p>
                             <input class="block mb-2 py-1 bg-gray-900 border-2" type="text" name="" id="per-player-cost"
                                 placeholder="$Amount">
-
 
                         </div>
                         <button id="calculate-btn" class="w-full btn btn-primary bg-sky-800">CALCULATE</button>
@@ -171,6 +186,7 @@
                             <Span class="text-white-400 font-semibold text-xl">$<span
                                     id="total-player-cost">0</span></Span>
                         </div>
+
                     </div>
                     <!-- total Expenses start-->
                     <div class="pt-6">
@@ -191,14 +207,13 @@
                             <Span class="text-orange-400 font-bold text-xl">$<span id="total-cost-field">0</span></Span>
 
                         </div>
-
                     </div>
                     <!-- total expenses end  -->
                 </div>
                 <div class="card card-compact  bg-base-100 shadow-xl">
                     <figure><img src="images/mario.jpg" alt="Shoes" class="w-full h-64 " /></figure>
                     <div class="card-body">
-                        <h2 class="card-title font-bold font-sanstext text-2xl text-white">Mario Balotelli</h2>
+                        <h2 id="player-name" class="card-title">Mario Balotelli</h2>
                         <div class="playerInfo grid grid-cols-2 justify-items-center text-xl pb-2">
                             <p>32 goals</p>
                             <p>assest</p>
