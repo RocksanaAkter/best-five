@@ -48,7 +48,8 @@
                             <p>assest</p>
                         </div>
                         <div class="card-actions justify-center">
-                            <button class="w-full btn btn-primary " onclick="selectPlayer(this)">SELECT</button>
+                            <button class="w-full btn btn-primary bg-sky-800"
+                                onclick="selectPlayer(this)">SELECT</button>
                         </div>
                     </div>
                 </div>
@@ -61,7 +62,8 @@
                             <p>assest</p>
                         </div>
                         <div class="card-actions justify-center">
-                            <button class="w-full btn btn-primary " onclick="selectPlayer(this)">SELECT</button>
+                            <button class="w-full btn btn-primary bg-sky-800"
+                                onclick="selectPlayer(this)">SELECT</button>
                         </div>
                     </div>
                 </div>
@@ -74,7 +76,8 @@
                             <p>assest</p>
                         </div>
                         <div class="card-actions justify-center">
-                            <button class="w-full btn btn-primary " onclick="selectPlayer(this)">SELECT</button>
+                            <button class="w-full btn btn-primary bg-sky-800"
+                                onclick="selectPlayer(this)">SELECT</button>
                         </div>
                     </div>
                 </div>
@@ -93,8 +96,10 @@
 
                                 </tr>
                             </thead>
-                            <tbody>
-
+                            <tbody id="table-playerName">
+                                <tr>
+                                    <!-- player selection list  -->
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -110,7 +115,8 @@
                             <p>assest</p>
                         </div>
                         <div class="card-actions justify-center">
-                            <button class="w-full btn btn-primary " onclick="selectPlayer(this)">SELECT</button>
+                            <button class="w-full btn btn-primary bg-sky-800"
+                                onclick="selectPlayer(this)">SELECT</button>
                         </div>
                     </div>
                 </div>
@@ -123,7 +129,8 @@
                             <p>assest</p>
                         </div>
                         <div class="card-actions justify-center">
-                            <button class="w-full btn btn-primary " onclick="selectPlayer(this)">SELECT</button>
+                            <button class="w-full btn btn-primary bg-sky-800"
+                                onclick="selectPlayer(this)">SELECT</button>
                         </div>
                     </div>
                 </div>
@@ -136,21 +143,53 @@
                             <p>assest</p>
                         </div>
                         <div class="card-actions justify-center">
-                            <button class="w-full btn btn-primary " onclick="selectPlayer(this)">SELECT</button>
+                            <button class="w-full btn btn-primary bg-sky-800"
+                                onclick="selectPlayer(this)">SELECT</button>
                         </div>
                     </div>
                 </div>
 
+                <div id="calculation-list" class="card card-compact bg-base-100 shadow-xl p-4">
+                    <!-- total player cost  -->
+                    <div>
+                        <h2
+                            class="text-center text-2xl text-white font-bold font-sans my-3 underline decoration-dashed">
+                            Budget</h2>
+                        <div class="grid grid-cols-2 gap-4">
+                            <p class="text-lg font-medium">Per Player</p>
+                            <input class="block mb-2 py-1 bg-gray-900 border-2" type="text" name="" id="per-player-cost"
+                                placeholder="$Amount">
 
 
-                <div class="card card-compact bg-base-100 shadow-xl">
-                    <figure><img src="images/mario.jpg" alt="Shoes" class="w-full h-48" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div class="card-actions justify-center">
-                            <button class="w-full btn btn-primary">SELECT</button>
                         </div>
+                        <button id="calculate-btn" class="w-full btn btn-primary bg-sky-800">CALCULATE</button>
+
+                        <div class="grid grid-cols-2 gap-8">
+                            <h2 class="text-lg font-medium">Player Expenses</h2>
+                            <Span class="text-white-400 font-semibold text-xl">$<span
+                                    id="total-player-cost">0</span></Span>
+                        </div>
+                    </div>
+                    <!-- total Expenses  -->
+                    <div class="pt-6">
+                        <div class=" grid grid-cols-2 gap-4">
+                            <h2 class="text-lg font-medium">Manager</h2>
+                            <input class="block mb-2 py-1 bg-gray-900 border-2" type="text" name="" id="manager-cost"
+                                placeholder="$Amount">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <h2 class="text-lg font-medium">Coach</h2>
+                            <input class="block mb-2 py-1 bg-gray-900 border-2" type="text" name="" id="coach-cost"
+                                placeholder="$Amount">
+                        </div>
+                        <button id="calculate-total-btn" class="w-full btn btn-primary bg-sky-800">CALCULATE
+                            TOTAL</button>
+                        <div class="grid grid-cols-2 gap-4">
+                            <h2 class="text-lg font-medium">Total </h2>
+                            <Span class="text-orange-400 font-bold text-xl">$<span id="total-cost-field">0</span></Span>
+
+                        </div>
+
                     </div>
                 </div>
                 <div class="card card-compact  bg-base-100 shadow-xl">
@@ -162,7 +201,8 @@
                             <p>assest</p>
                         </div>
                         <div class="card-actions justify-center">
-                            <button class="w-full btn btn-primary " onclick="selectPlayer(this)">SELECT</button>
+                            <button class="w-full btn btn-primary bg-sky-800"
+                                onclick="selectPlayer(this)">SELECT</button>
                         </div>
                     </div>
                 </div>
@@ -170,7 +210,9 @@
         </section>
 
     </main>
+    <script src="js/common.js"></script>
     <script src="js/select.js"></script>
+
 </body>
 
 
